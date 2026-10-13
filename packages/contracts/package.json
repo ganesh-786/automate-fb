@@ -1,0 +1,16 @@
+{
+  "name": "@automate/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Versioned data contracts exchanged between services. The only code the services share.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "zod": "^4.5.4"
+  }
+}

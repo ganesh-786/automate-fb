@@ -1,0 +1,8 @@
+# Every change is reviewed by the repository owner.
+* @ganesh-786
+
+# Changes here can weaken publishing safety or leak secrets, so they always need the owner.
+/SECURITY.md              @ganesh-786
+/.github/                 @ganesh-786
+/services/publisher/      @ganesh-786
+/services/review-console/ @ganesh-786

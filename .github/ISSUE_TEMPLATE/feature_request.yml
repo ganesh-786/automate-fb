@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a capability or a change in behaviour
+title: 'feat: '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what stops you today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should happen instead? Name the service or contract it affects.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      description: Proposals that break these need a decision record explaining why.
+      options:
+        - label: It keeps every service usable on its own
+        - label: It uses official platform APIs only
+        - label: It cannot publish anything without a recorded human approval
+        - label: It runs at no cost, or names the paid option as an optional upgrade

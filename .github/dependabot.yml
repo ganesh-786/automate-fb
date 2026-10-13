@@ -1,0 +1,52 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      # Remotion requires every one of its packages to be on the same version.
+      remotion:
+        patterns:
+          - remotion
+          - '@remotion/*'
+      react:
+        patterns:
+          - react
+          - react-dom
+          - '@types/react'
+          - '@types/react-dom'
+      lint-and-format:
+        patterns:
+          - eslint
+          - '@eslint/*'
+          - typescript-eslint
+          - eslint-config-prettier
+          - globals
+          - prettier
+    ignore:
+      # Pinned for the whole workspace to the exact version Remotion requires (see "overrides"
+      # in package.json). Raise it by hand together with a Remotion upgrade.
+      - dependency-name: zod
+      # typescript-eslint does not support the TypeScript 7 native compiler yet.
+      - dependency-name: typescript
+        update-types:
+          - version-update:semver-major
+      # The runtime is Node 24; its type definitions must stay on the same major.
+      - dependency-name: '@types/node'
+        update-types:
+          - version-update:semver-major
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    commit-message:
+      prefix: ci

@@ -1,0 +1,26 @@
+{
+  "name": "@automate/spikes-phase-0",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 0 risk spikes: each one proves or disproves a single assumption the plan depends on.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@automate/contracts": "*",
+    "@huggingface/transformers": "^3.8.1",
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "kokoro-js": "1.2.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.535",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0"
+  }
+}

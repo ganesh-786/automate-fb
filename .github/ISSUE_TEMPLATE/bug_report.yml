@@ -1,0 +1,62 @@
+name: Bug report
+description: Something does not behave as documented
+title: 'bug: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste tokens, API keys, signed URLs or `.env` contents.**
+        For a security problem, do not open an issue: follow the security policy instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - contracts
+        - script-studio
+        - image-studio
+        - voice-studio
+        - video-studio
+        - review-console
+        - publisher
+        - n8n orchestration
+        - spikes
+        - documentation or tooling
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, including the exact error message.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, in order.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system and the output of `node --version`.
+      placeholder: Windows 11, Node v24.20.0
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Report or log excerpt
+      description: For a spike, paste its `report.json`. Reports are already stripped of secrets, but check before pasting.
+      render: json
