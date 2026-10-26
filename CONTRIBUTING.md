@@ -5,7 +5,8 @@ first: it explains the service boundaries these rules protect.
 
 ## Setup
 
-Requires Node 24 and npm 11 or newer. The versions are enforced at install time.
+Requires Node 24.22.1 or a later 24.x release, and npm 11.19.1 or newer. The versions are enforced
+at install time.
 
 ```sh
 npm install

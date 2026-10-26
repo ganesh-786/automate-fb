@@ -67,8 +67,8 @@ Why each was chosen, with verified limits and sources, is in [docs/PLAN.md](docs
 
 ## Getting started
 
-**Requirements:** Node 24 and npm 11 or newer. The two local spikes download about 450 MB on
-their first run: a speech model and a headless browser.
+**Requirements:** Node 24.22.1 or a later 24.x release, and npm 11.19.1 or newer. The two local
+spikes download about 450 MB on their first run: a speech model and a headless browser.
 
 ```sh
 npm install
