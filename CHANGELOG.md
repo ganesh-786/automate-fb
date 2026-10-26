@@ -17,6 +17,10 @@ All notable changes to this project are recorded here. The format follows
 - Security policy, contribution guide, issue and pull request templates, Dependabot
   configuration and code owners.
 
+### Changed
+
+- The minimum versions are now Node 24.22.1 and npm 11.19.1, up from Node 24.0.0 and npm 11.
+
 ### Verified
 
 - Kokoro narration on the laptop CPU: 55.6 s of speech in 13.4 s with the full-precision model.
